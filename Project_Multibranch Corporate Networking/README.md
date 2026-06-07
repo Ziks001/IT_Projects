@@ -11,7 +11,6 @@ This project involves the design, structural implementation, and end-to-end veri
 <img width="1542" height="563" alt="image" src="https://github.com/user-attachments/assets/ca053839-9e8b-4913-b8cd-58602516229a" />
 
 
-
 Why This Project Matters
 Rather than deploying a flat network layout, this project showcases a deep understanding of hierarchical network architecture. It demonstrates how to successfully bridge multiple geographic regions while managing internal department security policies, centralizing core network services, and optimizing bandwidth consumption over simulated point-to-point leased lines.
 
