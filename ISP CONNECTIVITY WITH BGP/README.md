@@ -1,6 +1,6 @@
-# 🌐 ISP Connectivity & BGP Routing
+#  ISP Connectivity & BGP Routing
 
-> Dual-Homed BGP, NAT/PAT, QoS & Automatic Failover — Built in Cisco Packet Tracer 8.2.2
+> Dual-Homed BGP, NAT/PAT, QoS & Automatic Failover - Built in Cisco Packet Tracer 8.2.2
 
 <img width="1558" height="670" alt="image" src="https://github.com/user-attachments/assets/0f090b93-9889-40dc-978c-bd5ae21caae3" />
 
@@ -8,7 +8,7 @@
 
 ## Project Overview
 
-This project demonstrates the design, implementation, and live verification of an enterprise network achieving **high-availability internet connectivity** through two independent ISP providers. It uses **Border Gateway Protocol (BGP)** for dynamic path selection and automatic failover — a real-world skill rarely seen at entry level.
+This project demonstrates the design, implementation, and live verification of an enterprise network achieving **high-availability internet connectivity** through two independent ISP providers. It uses **Border Gateway Protocol (BGP)** for dynamic path selection and automatic failover, a real-world skill rarely seen at entry level.
 
 ### Business Problem Solved
 | Requirement | Solution |
@@ -35,9 +35,9 @@ This project demonstrates the design, implementation, and live verification of a
 ```
 
 ### Three-Layer Design
-- **Layer 1 — Upstream:** INTERNET-RT simulating the public internet
-- **Layer 2 — ISP:** Two independent ISPs for full redundancy
-- **Layer 3 — Customer:** EDGE-RT with internal LANs, servers, and IP phones
+- **Layer 1 - Upstream:** INTERNET-RT simulating the public internet
+- **Layer 2 - ISP:** Two independent ISPs for full redundancy
+- **Layer 3 - Customer:** EDGE-RT with internal LANs, servers, and IP phones
 
 ---
 
@@ -77,10 +77,10 @@ This project demonstrates the design, implementation, and live verification of a
 
 ## Configuration Phases
 
-### Phase 1 — Topology & Addressing
+### Phase 1 - Topology & Addressing
 Devices placed, WAN IPs assigned, all links verified up/up.
 
-### Phase 2 — BGP Peering
+### Phase 2 - BGP Peering
 ```bash
 router bgp 65001
  neighbor 100.64.1.1 remote-as 100
@@ -91,7 +91,7 @@ router bgp 65001
  network 100.64.2.0 mask 255.255.255.252
 ```
 
-### Phase 3 — NAT/PAT
+### Phase 3 - NAT/PAT
 ```bash
 access-list 1 permit 192.168.10.0 0.0.0.255
 access-list 1 permit 192.168.20.0 0.0.0.255
@@ -100,13 +100,13 @@ ip nat inside source list 1 interface se0/3/0 overload
 ip nat inside source list 1 interface se0/3/1 overload
 ```
 
-### Phase 4 — DHCP/DNS
+### Phase 4 - DHCP/DNS
 ENT-SERVERs configured with DHCP pools and DNS zones for local hostname resolution per subnet.
 
-### Phase 5 — Dual-Homed BGP Failover
+### Phase 5 - Dual-Homed BGP Failover
 Live failover tested with continuous ping. ISP1 shut down mid-test → BGP converged to ISP2 within **~30 seconds** → ping resumed successfully.
 
-### Phase 6 — QoS for VoIP
+### Phase 6 - QoS for VoIP
 ```bash
 access-list 101 permit udp any any eq 5060
 access-list 101 permit udp any any range 16384 32767
