@@ -1,6 +1,7 @@
 # Application Support Ticket Triage & Diagnostics Using SQL
 
 # Project Overview
+![Uploading image.png…]()
 
 This project is a practical SQL case study that simulates the day-to-day responsibilities of an Application/Technical Support Engineer. Using a fictional support ticket database, it demonstrates how SQL can be used to triage incidents, analyse application health, monitor engineer workloads, investigate recurring issues, evaluate service performance, and produce operational support documentation.
 
