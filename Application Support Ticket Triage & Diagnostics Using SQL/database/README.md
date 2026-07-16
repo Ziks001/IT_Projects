@@ -1,4 +1,4 @@
-# Database
+Database
 
 This folder contains the SQL scripts required to recreate the fictional support ticket database used throughout this project.
 
